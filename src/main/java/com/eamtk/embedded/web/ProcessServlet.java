@@ -24,4 +24,15 @@ public class ProcessServlet extends HttpServlet {
       resp.setContentType("text/plain");
       resp.getWriter().write("Hello World! Maven Web Project - KAEAM Servlet Process Edition.");
    }
+   
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+		   throws ServletException, IOException {
+	   
+	   new StartupJBPMProcess();
+	   
+	   resp.setContentType("text/plain");
+	   resp.getWriter().write("Hello World! Maven Web Project - KAEAM Servlet Process Edition.");
+   }
+  
 }
